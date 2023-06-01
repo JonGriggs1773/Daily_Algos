@@ -15,7 +15,7 @@ function removeWhiteSpace(str) {
     return newStr
 }
 
-removeWhiteSpace("Th i s is a l l   s  or ts  o f     me ss ed  u p")
+// removeWhiteSpace("Th i s is a l l   s  or ts  o f     me ss ed  u p")
 
 
 //? CallBack Function
@@ -30,4 +30,21 @@ const noSpaces = str => {
     return newStr
 }
 
-noSpaces("Y e t a n o t h e r   m e s s e d   u p   s tr i n g")
+// noSpaces("Y e t a n o t h e r   m e s s e d   u p   s tr i n g")
+
+
+//! Create a JavaScript function that given a string, returns the integer made from the string’s digits.
+
+function getAllNums(str) {
+    let digits = ""
+    for (let i = 0; i < str.length; i++) {
+        if (isNaN(str[i]) == false) {
+            digits += str[i]
+        }
+    }
+    digits = noSpaces(digits)
+    console.log(digits)
+    return digits
+}
+
+// getAllNums("1Thi2s i4s a s7t9ri0ng w1th 2 m3an3y num9346bers")
