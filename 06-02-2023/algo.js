@@ -15,7 +15,7 @@ function createAcronym(str) {
     return acronym
 }
 
-createAcronym("This random string should return an acronym")
+// createAcronym("This random string should return an acronym")
 
 //? Callback function
 const newAcronym = str => {
@@ -28,3 +28,19 @@ const newAcronym = str => {
     console.log(acronym)
     return acronym
 }
+
+// newAcronym("This random string should return an acronym")
+
+//! Create a function that, given an array of strings and a numerical value, returns an array that only contains strings longer than or equal to the given value.
+function removeString(arr, num) {
+    let result = []
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].length >= num) {
+            result.push(arr[i])
+        }
+    }
+    console.log(result)
+    return result
+}
+
+// removeString(['Good morning', 'sunshine', 'the', 'Earth', 'says', 'hello'], 5)
