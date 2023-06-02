@@ -48,3 +48,5 @@ function getAllNums(str) {
 }
 
 // getAllNums("1Thi2s i4s a s7t9ri0ng w1th 2 m3an3y num9346bers")
+
+//* This is something to commit and push to github
