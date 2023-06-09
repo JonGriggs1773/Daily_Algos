@@ -50,3 +50,14 @@ function getAllNums(str) {
 // getAllNums("1Thi2s i4s a s7t9ri0ng w1th 2 m3an3y num9346bers")
 
 //* This is something to commit and push to github
+
+console.log("You made a mistake!!!")
+console.error("You made a mistake!!!")
+console.warn("You made a mistake!!!")
+
+for(let i = 1; i < 6; i++) {
+    console.count("Looped this much")
+}
+console.clear()
+
+console.count(getAllNums("1Thi2s i4s a s7t9ri0ng w1th 2 m3an3y num9346bers"))
