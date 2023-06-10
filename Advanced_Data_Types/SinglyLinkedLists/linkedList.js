@@ -38,6 +38,20 @@ class LinkedList {
         // Returning the removed data
         return removedData
     }
+
+    getHeadData() {
+        return this.head.data
+    }
+
+    getSumOfList() {
+        let sum = 0
+        let runner = this.head
+        while(runner !== null) {
+            sum += runner.data
+            runner = runner.next
+        }
+        return sum
+    }
 }
 
 myLinkedList = new LinkedList()
@@ -46,9 +60,14 @@ myLinkedList.addFront(17)
 myLinkedList.addFront(16)
 myLinkedList.addFront(15)
 myLinkedList.addFront(14)
-console.log("This One !!!!!!!!: ", myLinkedList.removeFront())
-console.log(myLinkedList)
-console.log("This Two !!!!!!!!: ", myLinkedList.removeFront())
-console.log(myLinkedList)
-console.log("This Three !!!!!!!!: ", myLinkedList.removeFront())
-console.log(myLinkedList)
+myLinkedList.addFront(14)
+// console.log("This One !!!!!!!!: ", myLinkedList.removeFront())
+// console.log(myLinkedList)
+// console.log("This Two !!!!!!!!: ", myLinkedList.removeFront())
+// console.log(myLinkedList)
+// console.log("This Three !!!!!!!!: ", myLinkedList.removeFront())
+// console.log(myLinkedList)
+console.log("Head Data: ", myLinkedList.getHeadData())
+console.log(myLinkedList.getSumOfList())
+
+

@@ -31,15 +31,31 @@ class LinkedList:
         self.head = self.head.next
         return removed_data
     
+    def printHeadData(self):
+        return self.head.data
+    
+    def findSum(self):
+        runner = self.head
+        sum = 0
+        while runner != None:
+            sum = sum + runner.data
+            runner = runner.next
+        return sum
+
+
+
+    
 linked_list = LinkedList()
 print(linked_list.addFront(15))
 print(linked_list.addFront(16))
 print(linked_list.addFront(17))
 print(linked_list.addFront(18))
-print("Before Removal: ", linked_list.head.data)
-linked_list.removeFront()
-print("After Removal: ", linked_list.head.data)
-linked_list.removeFront()
-print("After Removal: ", linked_list.head.data)
-linked_list.removeFront()
-print("After Removal: ", linked_list.head.data)
+# print("Before Removal: ", linked_list.printHeadData())
+# linked_list.removeFront()
+# print("After Removal: ", linked_list.printHeadData())
+# linked_list.removeFront()
+# print("After Removal: ", linked_list.printHeadData())
+# linked_list.removeFront()
+# print("After Removal: ", linked_list.printHeadData())
+
+print(linked_list.findSum())
