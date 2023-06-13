@@ -52,6 +52,27 @@ class LinkedList {
         }
         return sum
     }
+
+    containsValue(num) {
+        let runner = this.head
+        while (runner !== null) {
+            if (runner.data == num) {
+                return true
+            }
+            runner = runner.next
+        }
+        return false
+    }
+
+    nodeCount() {
+        let runner = this.head
+        let count = 0
+        while (runner !== null) {
+            count++
+            runner = runner.next
+        }
+        return count
+    }
 }
 
 myLinkedList = new LinkedList()
@@ -61,13 +82,10 @@ myLinkedList.addFront(16)
 myLinkedList.addFront(15)
 myLinkedList.addFront(14)
 myLinkedList.addFront(14)
-// console.log("This One !!!!!!!!: ", myLinkedList.removeFront())
-// console.log(myLinkedList)
-// console.log("This Two !!!!!!!!: ", myLinkedList.removeFront())
-// console.log(myLinkedList)
-// console.log("This Three !!!!!!!!: ", myLinkedList.removeFront())
-// console.log(myLinkedList)
+myLinkedList.addFront(14)
 console.log("Head Data: ", myLinkedList.getHeadData())
 console.log(myLinkedList.getSumOfList())
+console.log(myLinkedList.containsValue(18))
+console.log(myLinkedList.nodeCount());
 
 
