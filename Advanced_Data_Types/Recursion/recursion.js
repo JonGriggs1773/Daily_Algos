@@ -17,7 +17,7 @@ const rFactoral = num => {
     if (!Number.isInteger(num)) {
         Math.trunc(num)
     }
-    if (num == 1 || num == 0) {
+    if (num === 1 || num === 0) {
         return 1
     }
     return rFactoral(num - 1) * num
