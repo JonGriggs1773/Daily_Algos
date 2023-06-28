@@ -81,11 +81,7 @@ myLinkedList.addFront(17)
 myLinkedList.addFront(16)
 myLinkedList.addFront(15)
 myLinkedList.addFront(14)
-myLinkedList.addFront(14)
-myLinkedList.addFront(14)
+console.log(myLinkedList.addFront(14))
 console.log("Head Data: ", myLinkedList.getHeadData())
-console.log(myLinkedList.getSumOfList())
-console.log(myLinkedList.containsValue(18))
-console.log(myLinkedList.nodeCount());
 
 

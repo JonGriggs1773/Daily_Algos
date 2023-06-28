@@ -85,6 +85,23 @@ class BST {
             return false
         }
     }
+
+    findMin() {
+        if (this.root) {
+            let runner = this.root
+            while (runner) {
+                if (runner.left === null) {
+                    return runner.value
+                }
+                else {
+                    runner = runner.left
+                }
+            }
+        }
+        else {
+            return "BST is empty"
+        }
+    }
 }
 
 
@@ -94,5 +111,11 @@ newTree.addValues(32)
 newTree.addValues(14)
 newTree.addValues(45)
 newTree.addValues(38)
-console.log(newTree.doesContain(38))
+newTree.addValues(37)
+newTree.addValues(36)
+newTree.addValues(12)
+newTree.addValues(-3)
+newTree.addValues(22)
+newTree.addValues(11)
+console.log(newTree.findMin())
 
