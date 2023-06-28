@@ -119,3 +119,5 @@ newTree.addValues(22)
 newTree.addValues(11)
 console.log(newTree.findMin())
 
+
+
