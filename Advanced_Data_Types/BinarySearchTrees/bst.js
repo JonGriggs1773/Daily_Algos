@@ -46,6 +46,45 @@ class BST {
             return this
         }
     }
+
+    doesContain(val) {
+        if (this.root) {
+            if (val === this.root.value) {
+                console.log(this.root.value)
+                return true
+            }
+            let runner = this.root
+            while (runner) {
+                if (val === runner.value) {
+                    console.log("Line 59")
+                    return true
+                }
+                else if (val > runner.value) {
+                    if (runner.right === null) {
+                        console.log("Runner's Right Node Is Null")
+                        return false
+                    }
+                    else {
+                        console.log("Went right")
+                        runner = runner.right
+                    }
+                }
+                else {
+                    if (runner.left === null) {
+                        console.log("Runner's Left Node Is Null")
+                        return false
+                    }
+                    else {
+                        console.log("Went left")
+                        runner = runner.left
+                    }
+                }
+            }
+        }
+        else {
+            return false
+        }
+    }
 }
 
 
@@ -55,4 +94,5 @@ newTree.addValues(32)
 newTree.addValues(14)
 newTree.addValues(45)
 newTree.addValues(38)
-console.log(newTree)
+console.log(newTree.doesContain(38))
+
