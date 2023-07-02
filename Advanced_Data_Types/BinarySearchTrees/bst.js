@@ -62,6 +62,7 @@ class BST {
                 else if (val > runner.value) {
                     if (runner.right === null) {
                         console.log("Runner's Right Node Is Null")
+                        console.log("Value not in Search Tree")
                         return false
                     }
                     else {
@@ -72,6 +73,7 @@ class BST {
                 else {
                     if (runner.left === null) {
                         console.log("Runner's Left Node Is Null")
+                        console.log("Value not in Search Tree")
                         return false
                     }
                     else {
@@ -102,6 +104,24 @@ class BST {
             return "BST is empty"
         }
     }
+
+    findMax() {
+        if (this.root) {
+            let runner = this.root
+            while (runner) {
+                if (runner.right === null) {
+                    return runner.value
+                }
+                else {
+                    runner = runner.right
+                }
+            }
+        }
+        else {
+            return "BST is empty"
+        }
+    } 
+        
 }
 
 
@@ -109,6 +129,7 @@ const newTree = new BST()
 newTree.addValues(33)
 newTree.addValues(32)
 newTree.addValues(14)
+newTree.addValues(-15)
 newTree.addValues(45)
 newTree.addValues(38)
 newTree.addValues(37)
@@ -117,7 +138,8 @@ newTree.addValues(12)
 newTree.addValues(-3)
 newTree.addValues(22)
 newTree.addValues(11)
-console.log(newTree.findMin())
+console.log(newTree.doesContain(39))
+console.log(newTree.findMax())
 
 
 
