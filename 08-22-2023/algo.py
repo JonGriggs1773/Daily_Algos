@@ -23,9 +23,10 @@ def getTotalX(a, b):
         for num in a:
             if i % num != 0:
                 is_valid = False
-        for num in b:
-            if num % i != 0:
-                is_valid = False
+        if is_valid == True:
+            for num in b:
+                if num % i != 0:
+                    is_valid = False
         if is_valid == True:
             count += 1
     
