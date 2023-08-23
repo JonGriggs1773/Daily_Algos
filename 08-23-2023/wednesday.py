@@ -40,8 +40,8 @@ class Solution(object):
 
 obj = Solution()
 
-# print("Return Here:", obj.distinctAverages([4,1,4,0,3,5]))
-# print("Return Here:", obj.distinctAverages([1, 100]))
+print("Return Here:", obj.distinctAverages([4,1,4,0,3,5]))
+print("Return Here:", obj.distinctAverages([1, 100]))
 print("Return Here:", obj.distinctAverages([9,5,7,8,7,9,8,2,0,7]))
 
 
