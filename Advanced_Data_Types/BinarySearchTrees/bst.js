@@ -121,7 +121,17 @@ class BST {
             return "BST is empty"
         }
     } 
-        
+    
+    findHeight(node) {
+        if (node == null) {
+          return 0; // Height of an empty tree is 0
+        }
+
+        const leftHeight = this.findHeight(node.left);
+        const rightHeight = this.findHeight(node.right);
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
 }
 
 
@@ -140,6 +150,6 @@ newTree.addValues(22)
 newTree.addValues(11)
 console.log(newTree.doesContain(39))
 console.log(newTree.findMax())
-
+console.log(newTree.findHeight())
 
 
